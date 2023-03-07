@@ -4,14 +4,178 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="" />
+    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AdapterMethodIdiom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AddingGroups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithoutGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ArrayIsNotIterable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AsListInference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CollectionDifferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CollectionSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/EnvironmentVariables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ForInCollections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/GenericsAndUpcasting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/InterfaceVsIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/IterableClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/LinkedListFeatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ListFeatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ListIteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/MapOfList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ModifyingArraysAsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/MultiIterableClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/NonCollectionSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PetMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PrintingCollections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PriorityQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/QueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOfInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOfString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SimpleCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SimpleIteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SortedSetOfString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackCollision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/Statistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/UniqueWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/collections/UniqueWordsAlphabetic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/ComposedEquality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/CountedString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/DefaultComparison.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Equality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/EqualityFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/IndividualTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/MapEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Prediction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SimpleHashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SlowMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/StringHashCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SuccinctEquality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ArrayShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/BasicSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CollectionMethodDifferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ConvertTo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CountMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CountingIntegerList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Countries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Enums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/FillMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/HTMLColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/MouseClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Nap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Null.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/OSExecute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/OSExecuteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ProcessFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Rand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Repeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/RmDir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Sets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Suppliers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TestRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TimedAbort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TypeCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/AtUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/ClassNameFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCleanup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/AnonymousImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/BoundedClassReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ClassCasts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ClassInitialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/DynamicSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/FamilyVsExactType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/GenericClassReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/HiddenImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ID2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/InnerImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/InterfaceViolation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ModifyingPrivateFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/NullRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/RegisteredFactories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SelectingMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Shapes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ShowMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SimpleDynamicProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SimpleProxyDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SnowRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SweetShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/WildcardClassReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/interfacea/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/packageaccess/HiddenC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Creator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Cymric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/EgyptianMau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/ForNamePetCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Hamster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Individual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Manx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Mouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Mutt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/PetCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Pug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Rat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Rodent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/toys/GenericToyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/toys/ToyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -21,7 +185,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2MfxOAHbRQql0ebnuiWGiV1w3oR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,9 +195,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/kuznetsov.aa.HITED1UA/IdeaProjects/AppendicesOJ8/src/main/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuznetsov.aa.HITED1UA\IdeaProjects\AppendicesOJ8\src\main\java" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
