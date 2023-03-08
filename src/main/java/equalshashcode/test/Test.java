@@ -1,16 +1,42 @@
 package equalshashcode.test;
 
+import reflection.interfacea.A;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Test {
-    public static void main(String[] args) {
-        Account account1 = new Account("Pituh", BigDecimal.ZERO);
-        Account account2 = new Account("Pituh", BigDecimal.valueOf(24.18));
+    private static Set<Account> test(Set<Account> testSet) {
+        Account testAccount = new Account("herod", BigDecimal.valueOf(999.99), UUID.randomUUID());
+        Collections.addAll(testSet,
+                new Account("pituh", BigDecimal.ZERO, UUID.randomUUID()),
+                new Account("pituh", BigDecimal.valueOf(24.18), UUID.randomUUID()),
+                new Account("pituh", BigDecimal.valueOf(24.18), UUID.randomUUID()),
+                new Account("chmo", BigDecimal.ONE, UUID.randomUUID()),
+                new Account("gnyda", BigDecimal.valueOf(22.18), UUID.randomUUID()),
+                new Account("vitalik", BigDecimal.TEN, UUID.randomUUID()),
+                new Account("shasha", BigDecimal.valueOf(0.18), UUID.randomUUID()),
+                testAccount
+        );
 
-        System.out.println(account1.equals(account2));
+        return testSet;
+    }
+
+    public static void main(String[] args) {
+        TreeSet<Account> accountTreeSet = new TreeSet<>();
+        HashSet<Account> accountHashSet= new HashSet<>();
+        LinkedHashSet<Account> accountLinkedHashSet = new LinkedHashSet<>();
+
+        Map<String, Account> accountMap = new TreeMap<>();
+
+        System.out.println(test(accountTreeSet));
+        System.out.println(test(accountHashSet));
+        System.out.println(test(accountLinkedHashSet));
+
+        accountTreeSet.forEach(a -> accountMap.put(a.getUsername(), a));
+
+        System.out.println(accountMap);
+
+
     }
 }
