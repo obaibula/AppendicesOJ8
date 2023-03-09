@@ -195,7 +195,7 @@ public class HTMLColors {
   show(Map<Integer,String> m, int count) {
     m.entrySet().stream()
       .limit(count)
-      .forEach(e -> show(e));
+      .forEach(HTMLColors::show);
   }
   public static void show(Map<Integer,String> m) {
     show(m, m.size());
@@ -214,6 +214,7 @@ public class HTMLColors {
     lst.stream()
       .limit(count)
       .forEach(n -> System.out.format("0x%06X%n", n));
+
   }
   public static void showrgb(Collection<Integer> lst) {
     showrgb(lst, lst.size());

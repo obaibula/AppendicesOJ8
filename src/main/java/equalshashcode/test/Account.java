@@ -1,5 +1,7 @@
 package equalshashcode.test;
 
+import onjava.Null;
+
 import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Objects;
@@ -53,6 +55,7 @@ public class Account implements Comparable<Account> {
 
     @Override
     public int compareTo(Account o) {
+        Objects.requireNonNull(o);
         int firstCompare = username.compareToIgnoreCase(o.username);
         if (firstCompare != 0)
             return firstCompare;

@@ -27,13 +27,14 @@ public class Test {
         HashSet<Account> accountHashSet= new HashSet<>();
         LinkedHashSet<Account> accountLinkedHashSet = new LinkedHashSet<>();
 
-        Map<String, Account> accountMap = new TreeMap<>();
+        Map<Account, String> accountMap = new TreeMap<>();
 
         System.out.println(test(accountTreeSet));
         System.out.println(test(accountHashSet));
         System.out.println(test(accountLinkedHashSet));
 
-        accountTreeSet.forEach(a -> accountMap.put(a.getUsername(), a));
+        accountTreeSet.forEach(a -> accountMap.put(a, a.getUsername()));
+
 
         System.out.println(accountMap);
 
