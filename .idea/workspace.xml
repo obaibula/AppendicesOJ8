@@ -4,43 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/AssociativeArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Bits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/CanonicalMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/CollectionMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Enumerations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/FailFast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/FillMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/FillingLists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/FunctionalMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/HTMLColorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/LinkedHashMapDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/ListOps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/ListSortSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/MapOps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/NavMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/QueueBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/ReadOnly.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/References.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/SetOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/SimpleDeques.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/SortedMapDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/SortedSetDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Stacks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/StreamFillMaps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/SuppliersCollectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Synchronization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/ToDoList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/TypesForSets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Unsupported.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collectiontopics/Utilities.java" afterDir="false" />
+    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="п">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onjava/HTMLColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/onjava/HTMLColors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/oleh/IdeaProjects/AppendicesOJ8/src/main/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/oleh/IdeaProjects/AppendicesOJ8/src/main/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -120,6 +85,18 @@
       <option name="presentableId" value="Default" />
       <updated>1678172405485</updated>
     </task>
+    <task id="LOCAL-00001" summary="п">
+      <created>1678344424294</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678344424294</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="п" />
+    <option name="LAST_COMMIT_MESSAGE" value="п" />
   </component>
 </project>
