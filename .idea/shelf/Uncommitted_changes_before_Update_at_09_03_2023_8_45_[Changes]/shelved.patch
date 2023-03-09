@@ -1,0 +1,314 @@
+Index: src/main/java/equalshashcode/test/Account.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package equalshashcode.test;\r\n\r\nimport java.math.BigDecimal;\r\nimport java.util.Objects;\r\n\r\npublic class Account {\r\n    String username;\r\n    BigDecimal balance;\r\n\r\n    public Account(String username, BigDecimal balance) {\r\n        this.username = username;\r\n        this.balance = balance;\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object rval) {\r\n        return rval instanceof Account &&\r\n                Objects.equals(username, ((Account) rval).username);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/equalshashcode/test/Account.java b/src/main/java/equalshashcode/test/Account.java
+--- a/src/main/java/equalshashcode/test/Account.java	(revision ce5b10e0ae390547cef9d817291a9fd97b52e5cb)
++++ b/src/main/java/equalshashcode/test/Account.java	(date 1678280418008)
+@@ -1,9 +1,10 @@
+ package equalshashcode.test;
+ 
+ import java.math.BigDecimal;
++import java.util.Comparator;
+ import java.util.Objects;
+ 
+-public class Account {
++public class Account implements Comparable<Account> {
+     String username;
+     BigDecimal balance;
+ 
+@@ -15,6 +16,22 @@
+     @Override
+     public boolean equals(Object rval) {
+         return rval instanceof Account &&
+-                Objects.equals(username, ((Account) rval).username);
++                Objects.equals(username, ((Account) rval).username)
++                && Objects.equals(balance, ((Account) rval).balance);
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(username, balance);
++    }
++
++    @Override
++    public int compareTo(Account o) {
++        return username.compareTo(o.username);
++    }
++
++    @Override
++    public String toString() {
++        return username + ": " + balance;
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/AdapterMethodIdiom.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/AddingGroups.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithGenerics.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithoutGenerics.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ArrayIsNotIterable.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/AsListInference.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/CollectionDifferences.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/CollectionSequence.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/EnvironmentVariables.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ForInCollections.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/GenericsAndUpcasting.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/InterfaceVsIterator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/IterableClass.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/LinkedListFeatures.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ListFeatures.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ListIteration.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/MapOfList.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/ModifyingArraysAsList.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/MultiIterableClass.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/NonCollectionSequence.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/PetMap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/PrintingCollections.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/PriorityQueueDemo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/QueueDemo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SetOfInteger.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SetOfString.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SetOperations.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SimpleCollection.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SimpleIteration.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/SortedSetOfString.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/StackCollision.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/StackTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/StackTest2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/Statistics.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/UniqueWords.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/collections/UniqueWordsAlphabetic.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/ComposedEquality.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/CountedString.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/DefaultComparison.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/Equality.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/EqualityFactory.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/IndividualTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/MapEntry.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/Prediction.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SimpleHashMap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SlowMap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/StringHashCode.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/SuccinctEquality.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/ArrayShow.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/BasicSupplier.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/CollectionMethodDifferences.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/ConvertTo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Count.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/CountMap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/CountingIntegerList.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Countries.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Enums.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/FillMap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/HTMLColors.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/MouseClick.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Nap.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Null.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/OSExecute.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/OSExecuteException.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Operations.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Pair.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/ProcessFiles.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Rand.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Range.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Repeat.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/RmDir.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Sets.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Stack.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Suppliers.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/TestRange.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/TimedAbort.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Timer.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Tuple.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Tuple2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Tuple3.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Tuple4.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/Tuple5.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/TypeCounter.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/AtUnit.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/ClassNameFinder.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/Test.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCleanup.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCreate.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/onjava/atunit/TestProperty.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/AnonymousImplementation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/BoundedClassReferences.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/ClassCasts.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/ClassInitialization.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/DynamicSupplier.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/FamilyVsExactType.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/GenericClassReferences.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/HiddenImplementation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/ID2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/InnerImplementation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/InterfaceViolation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/ModifyingPrivateFields.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/NullRobot.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Operation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Person.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/PetCounter.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/PetCounter2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/PetCounter3.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/PetCounter4.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Position.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/RegisteredFactories.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Robot.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/SelectingMethods.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Shapes.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/ShowMethods.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/SimpleDynamicProxy.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/SimpleProxyDemo.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/SnowRobot.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/Staff.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/SweetShop.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/WildcardClassReferences.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/interfacea/A.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/packageaccess/HiddenC.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Cat.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Creator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Cymric.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Dog.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/EgyptianMau.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/ForNamePetCreator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Hamster.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Individual.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Manx.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Mouse.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Mutt.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Person.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Pet.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/PetCreator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Pug.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Rat.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/pets/Rodent.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/toys/GenericToyTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/reflection/toys/ToyTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2MfxOAHbRQql0ebnuiWGiV1w3oR\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/kuznetsov.aa.HITED1UA/IdeaProjects/AppendicesOJ8/src/main/java\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kuznetsov.aa.HITED1UA\\IdeaProjects\\AppendicesOJ8\\src\\main\\java\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b\" name=\"Changes\" comment=\"\" />\r\n      <created>1678172405485</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1678172405485</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ce5b10e0ae390547cef9d817291a9fd97b52e5cb)
++++ b/.idea/workspace.xml	(date 1678280010741)
+@@ -4,160 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AdapterMethodIdiom.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AddingGroups.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithGenerics.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ApplesAndOrangesWithoutGenerics.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ArrayIsNotIterable.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AsListInference.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CollectionDifferences.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CollectionSequence.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/CrossCollectionIteration2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/EnvironmentVariables.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ForInCollections.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/GenericsAndUpcasting.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/InterfaceVsIterator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/IterableClass.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/LinkedListFeatures.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ListFeatures.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ListIteration.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/MapOfList.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/ModifyingArraysAsList.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/MultiIterableClass.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/NonCollectionSequence.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PetMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PrintingCollections.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/PriorityQueueDemo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/QueueDemo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOfInteger.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOfString.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SetOperations.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SimpleCollection.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SimpleIteration.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/SortedSetOfString.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackCollision.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/StackTest2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/Statistics.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/UniqueWords.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/UniqueWordsAlphabetic.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/ComposedEquality.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/CountedString.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/DefaultComparison.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Equality.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/EqualityFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Groundhog2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/IndividualTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/MapEntry.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/Prediction.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SimpleHashMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SlowMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SpringDetector2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/StringHashCode.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SubtypeEquality2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/SuccinctEquality.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ArrayShow.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/BasicSupplier.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CollectionMethodDifferences.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ConvertTo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Count.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CountMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/CountingIntegerList.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Countries.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Enums.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/FillMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/HTMLColors.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/MouseClick.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Nap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Null.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/OSExecute.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/OSExecuteException.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Operations.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Pair.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/ProcessFiles.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Rand.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Range.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Repeat.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/RmDir.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Sets.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Stack.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Suppliers.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TestRange.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TimedAbort.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Timer.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple3.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple4.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/Tuple5.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/TypeCounter.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/AtUnit.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/ClassNameFinder.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/Test.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCleanup.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestObjectCreate.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/onjava/atunit/TestProperty.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/AnonymousImplementation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/BoundedClassReferences.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ClassCasts.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ClassInitialization.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/DynamicSupplier.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/FamilyVsExactType.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/GenericClassReferences.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/HiddenImplementation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ID2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/InnerImplementation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/InterfaceViolation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ModifyingPrivateFields.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/NullRobot.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Operation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Person.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter3.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/PetCounter4.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Position.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/RegisteredFactories.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Robot.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SelectingMethods.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Shapes.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/ShowMethods.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SimpleDynamicProxy.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SimpleProxyDemo.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SnowRobot.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/Staff.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/SweetShop.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/WildcardClassReferences.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/interfacea/A.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/packageaccess/HiddenC.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Cat.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Creator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Cymric.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Dog.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/EgyptianMau.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/ForNamePetCreator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Hamster.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Individual.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Manx.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Mouse.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Mutt.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Person.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Pet.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/PetCreator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Pug.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Rat.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/pets/Rodent.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/toys/GenericToyTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/reflection/toys/ToyTest.java" afterDir="false" />
++    <list default="true" id="0dbb5ecf-ded3-4fb9-a527-cad6a4a6508b" name="Changes" comment="п">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/equalshashcode/IndividualTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/IndividualTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Account.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/equalshashcode/test/Test.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -196,7 +47,7 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "last_opened_file_path": "C:/Users/kuznetsov.aa.HITED1UA/IdeaProjects/AppendicesOJ8/src/main/java",
++    "last_opened_file_path": "C:/Users/kuznetsov.aa.HITED1UA/IdeaProjects/AppendicesOJ8",
+     "project.structure.last.edited": "Modules",
+     "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.2"
+@@ -216,6 +67,18 @@
+       <option name="presentableId" value="Default" />
+       <updated>1678172405485</updated>
+     </task>
++    <task id="LOCAL-00001" summary="п">
++      <created>1678199813316</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1678199813316</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="п" />
++    <option name="LAST_COMMIT_MESSAGE" value="п" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/equalshashcode/IndividualTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package equalshashcode;// equalshashcode/IndividualTest.java\r\n// (c)2021 MindView LLC: see Copyright.txt\r\n// We make no guarantees that this code is fit for any purpose.\r\n// Visit http://OnJava8.com for more book information.\r\nimport collections.MapOfList;\r\nimport reflection.pets.*;\r\nimport java.util.*;\r\n\r\npublic class IndividualTest {\r\n  public static void main(String[] args) {\r\n    Set<Individual> pets = new TreeSet<>();\r\n    for(List<? extends Pet> lp :\r\n        MapOfList.petPeople.values())\r\n      for(Pet p : lp)\r\n        pets.add(p);\r\n    pets.forEach(System.out::println);\r\n  }\r\n}\r\n/* Output:\r\nCat Elsie May\r\nCat Pinkola\r\nCat Shackleton\r\nCat Stanford\r\nCymric Molly\r\nDog Margrett\r\nMutt Spot\r\nPug Louie aka Louis Snorkelstein Dupree\r\nRat Fizzy\r\nRat Freckly\r\nRat Fuzzy\r\n*/\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/equalshashcode/IndividualTest.java b/src/main/java/equalshashcode/IndividualTest.java
+--- a/src/main/java/equalshashcode/IndividualTest.java	(revision ce5b10e0ae390547cef9d817291a9fd97b52e5cb)
++++ b/src/main/java/equalshashcode/IndividualTest.java	(date 1678279414399)
+@@ -11,8 +11,7 @@
+     Set<Individual> pets = new TreeSet<>();
+     for(List<? extends Pet> lp :
+         MapOfList.petPeople.values())
+-      for(Pet p : lp)
+-        pets.add(p);
++      pets.addAll(lp);
+     pets.forEach(System.out::println);
+   }
+ }
+Index: src/main/java/equalshashcode/test/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package equalshashcode.test;\r\n\r\nimport java.math.BigDecimal;\r\nimport java.util.ArrayList;\r\nimport java.util.Collections;\r\nimport java.util.List;\r\nimport java.util.TreeSet;\r\n\r\npublic class Test {\r\n    public static void main(String[] args) {\r\n        Account account1 = new Account(\"Pituh\", BigDecimal.ZERO);\r\n        Account account2 = new Account(\"Pituh\", BigDecimal.valueOf(24.18));\r\n\r\n        System.out.println(account1.equals(account2));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/equalshashcode/test/Test.java b/src/main/java/equalshashcode/test/Test.java
+--- a/src/main/java/equalshashcode/test/Test.java	(revision ce5b10e0ae390547cef9d817291a9fd97b52e5cb)
++++ b/src/main/java/equalshashcode/test/Test.java	(date 1678281391933)
+@@ -1,16 +1,26 @@
+ package equalshashcode.test;
+ 
++import reflection.interfacea.A;
++
+ import java.math.BigDecimal;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.List;
+-import java.util.TreeSet;
++import java.util.*;
+ 
+ public class Test {
++
++    private static Set<Account> tester(Set<Account> accountSet){
++        Collections.addAll(accountSet,
++                new Account("Gnyda", BigDecimal.valueOf(0.44)),
++                new Account("Gnyda", BigDecimal.valueOf(0.41)),
++                new Account("Pituh", BigDecimal.ZERO),
++                new Account("Pituh", BigDecimal.valueOf(24.18)),
++                new Account("Gaduchka", BigDecimal.TEN),
++                new Account("Nizhegorodov", BigDecimal.ONE));
++    }
+     public static void main(String[] args) {
+-        Account account1 = new Account("Pituh", BigDecimal.ZERO);
+-        Account account2 = new Account("Pituh", BigDecimal.valueOf(24.18));
++        TreeSet<Account> accountTreeSet = new TreeSet<>();
++
+ 
+-        System.out.println(account1.equals(account2));
++        System.out.println(accountTreeSet);
++
+     }
+ }
